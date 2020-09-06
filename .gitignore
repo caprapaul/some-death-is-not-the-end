@@ -104,3 +104,6 @@ _UpgradeReport_Files/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Generated class from the input system using unity
+/[Aa]ssets/Scripts/_Generated/
