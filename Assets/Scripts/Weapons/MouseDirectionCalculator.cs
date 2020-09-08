@@ -1,15 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Movement
+namespace Weapons
 {
-    [RequireComponent(typeof(IMovementHandler))]
-    public class PlayerInputMovement : MonoBehaviour, GameInputs.IPlayerActions
+    [RequireComponent(typeof(Transform))]
+    public class MouseDirectionCalculator : MonoBehaviour, GameInputs.IPlayerActions
     {
-        private MovementData _currentMovement;
+        public Vector2 Direction { get; private set; } = Vector2.zero;
         private GameInputs _gameInputs;
-        private IMovementHandler _movementHandler;
-        
+        private Camera _camera;
+
+        private void Start()
+        {
+            _camera = Camera.main;
+        }
+
         private void OnEnable()
         {
             if (_gameInputs == null)
@@ -18,7 +23,6 @@ namespace Movement
                 _gameInputs.Player.SetCallbacks(this);
             }
 
-            _movementHandler = GetComponent<IMovementHandler>();
             _gameInputs.Enable();
         }
 
@@ -27,24 +31,26 @@ namespace Movement
             _gameInputs.Disable();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
-            _movementHandler.OnMove(_currentMovement);
+            Vector3 playerPosition = transform.position;
+            Vector3 mousePosition = _camera.ScreenToWorldPoint(_gameInputs.Player.Look.ReadValue<Vector2>());
+            Direction = (mousePosition - playerPosition).normalized;
         }
 
         public void OnMove(InputAction.CallbackContext context)
         {
-            _currentMovement.Direction = context.ReadValue<Vector2>();
+            // not used
         }
 
         public void OnLook(InputAction.CallbackContext context)
         {
-            // unused
+            // not used
         }
 
         public void OnFire(InputAction.CallbackContext context)
         {
-            // unused
+            // not used
         }
     }
 }

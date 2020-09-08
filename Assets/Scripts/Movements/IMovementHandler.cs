@@ -1,4 +1,4 @@
-namespace Movement
+namespace Movements
 {
     public interface IMovementHandler
     {

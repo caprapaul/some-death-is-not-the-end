@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Movement
+namespace Movements
 {
     public class MovementHandler : MonoBehaviour, IMovementHandler
     {
