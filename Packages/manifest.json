@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.2d.tilemap.extras": "https://github.com/Unity-Technologies/2d-extras.git#master",
     "com.h8man.2d.navmeshplus": "https://github.com/h8man/NavMeshPlus.git",
     "com.qfsw.mop2": "https://github.com/QFSW/MasterObjectPooler2.git",
     "com.unity.2d.tilemap": "1.0.0",
