@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.h8man.2d.navmeshplus": {
+      "version": "https://github.com/h8man/NavMeshPlus.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "88f2a667ad76869573b1e35ccbe84437968c7373"
+    },
     "com.qfsw.mop2": {
       "version": "https://github.com/QFSW/MasterObjectPooler2.git",
       "depth": 0,
