@@ -219,12 +219,12 @@ PrefabInstance:
     - target: {fileID: 759026902658295909, guid: 2922b338c34612848a637b606e4884bc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.88
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 759026902658295909, guid: 2922b338c34612848a637b606e4884bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.38
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 759026902658295909, guid: 2922b338c34612848a637b606e4884bc,
         type: 3}
@@ -414,21 +414,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9176821925619798117, guid: c5b8fc7e5fe2252439935e3330aff1f5,
-        type: 3}
-      propertyPath: m_CompressBounds
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176821925619798117, guid: c5b8fc7e5fe2252439935e3330aff1f5,
-        type: 3}
-      propertyPath: m_VoxelSize
-      value: 0.16666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176821925619798117, guid: c5b8fc7e5fe2252439935e3330aff1f5,
-        type: 3}
-      propertyPath: m_NavMeshData
-      value: 
-      objectReference: {fileID: 23800000, guid: aa5b78fd3cdcd9944ba59ed28891314e,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5b8fc7e5fe2252439935e3330aff1f5, type: 3}
