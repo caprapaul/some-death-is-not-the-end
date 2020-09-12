@@ -107,6 +107,8 @@ GameObject:
   - component: {fileID: -3748073595502254654}
   - component: {fileID: -7539156787421214733}
   - component: {fileID: 4505617791169938895}
+  - component: {fileID: -1389033197279372733}
+  - component: {fileID: -5900354245876638906}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -177,3 +179,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _amount: 1
+--- !u!114 &-1389033197279372733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6362351999294336368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85f7e35079bbf0341a0f5e77a20d984f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onTriggerEnter2D:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4505617791169938895}
+        m_MethodName: Send
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onTriggerStay2D:
+    m_PersistentCalls:
+      m_Calls: []
+  _onTriggerExit2D:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!61 &-5900354245876638906
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6362351999294336368}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

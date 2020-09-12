@@ -12,7 +12,6 @@ namespace Receivers
 
         public void Damage(int amount)
         {
-            Debug.Log("Damaged");
             _onDamaged.Invoke(amount);
         }
     }

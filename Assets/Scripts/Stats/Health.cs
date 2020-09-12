@@ -17,14 +17,38 @@ namespace Stats
         [SerializeField]
         private UnityEvent _onDeath;
 
+        public UnityEvent OnDamaged
+        {
+            get
+            {
+                return _onDamaged;
+            }
+        }
+
+        public UnityEvent OnRestored
+        {
+            get
+            {
+                return _onRestored;
+            }
+        }
+        
+        public UnityEvent OnDeath
+        {
+            get
+            {
+                return _onDeath;
+            }
+        }
+
         public void Damage(int amount)
         {
-            _onDamaged.Invoke();
+            OnDamaged.Invoke();
         
             if (_current - amount <= 0)
             {
                 _current = 0;
-                _onDeath.Invoke();
+                OnDeath.Invoke();
             }
             else
             {
@@ -34,7 +58,7 @@ namespace Stats
 
         public void Restore(int amount)
         {
-            _onRestored.Invoke();
+            OnRestored.Invoke();
         
             if (_current + amount > _maximum)
             {
