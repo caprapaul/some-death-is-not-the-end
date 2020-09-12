@@ -4958,7 +4958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPool: {fileID: 11400000, guid: 153b8a7ec95153b4d80abb8de075af7c, type: 2}
   ReloadTime: 0.1
-  BulletSpeed: 50
+  BulletSpeed: 10
 --- !u!114 &34183562
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -393,6 +393,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5680965485419257811}
     m_Modifications:
+    - target: {fileID: 6974811576715871894, guid: c5b8fc7e5fe2252439935e3330aff1f5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 9176821925619798114, guid: c5b8fc7e5fe2252439935e3330aff1f5,
         type: 3}
       propertyPath: m_Name

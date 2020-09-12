@@ -15,9 +15,11 @@ namespace Weapons
         {
             _lastShootTime = Time.time;
             var bullet = BulletPool.GetObjectComponent<Bullet>();
-            bullet.Direction = direction;
+            bullet.Direction = direction.normalized;
             bullet.Speed = BulletSpeed;
             bullet.transform.position = initialPosition;
+            bullet.BulletPool = BulletPool;
+            bullet.enabled = true;
         }
 
         public bool CanFire()
