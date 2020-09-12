@@ -414,5 +414,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9176821925619798117, guid: c5b8fc7e5fe2252439935e3330aff1f5,
+        type: 3}
+      propertyPath: m_CompressBounds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176821925619798117, guid: c5b8fc7e5fe2252439935e3330aff1f5,
+        type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 81c5f265dbbfb644bb5061a793a35282,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5b8fc7e5fe2252439935e3330aff1f5, type: 3}
