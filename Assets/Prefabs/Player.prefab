@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 675439728}
   - component: {fileID: 675439729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 1563488376}
   - component: {fileID: 1563488375}
   - component: {fileID: 1563488374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4854,7 +4854,7 @@ GameObject:
   - component: {fileID: 3148709339909518833}
   - component: {fileID: 961511702}
   - component: {fileID: 961511703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
