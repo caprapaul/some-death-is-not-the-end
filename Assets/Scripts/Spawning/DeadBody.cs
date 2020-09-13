@@ -1,3 +1,4 @@
+using Senders;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -31,6 +32,10 @@ namespace Spawning
             DeadBodyManager.Instance.RegisterDeadBody(this);
             transform.rotation = Quaternion.Euler(0, 0, 180);
             _spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f);
+            
+            var damageSender = GetComponent<DamageSender>();
+            if (damageSender)
+                Destroy(damageSender);
         }
 
         public void RemoveItCompletely()
