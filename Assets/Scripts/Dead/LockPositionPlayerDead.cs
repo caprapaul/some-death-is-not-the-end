@@ -15,7 +15,7 @@ namespace Movements
 
         private void Update()
         {
-            _rb.constraints = !Player.Current.isAlive
+            _rb.constraints = !Player.Current.IsAlive
                 ? RigidbodyConstraints2D.FreezeAll
                 : _defaultConstraints;
         }

@@ -24,7 +24,7 @@ namespace Weapons
 
         public bool CanFire()
         {
-            return Player.Current.isAlive && Time.time > _lastShootTime + ReloadTime;
+            return Player.Current.IsAlive && Time.time > _lastShootTime + ReloadTime;
         }
     }
 }

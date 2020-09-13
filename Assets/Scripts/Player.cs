@@ -1,14 +1,16 @@
-using System;
 using Spawning;
 using Stats;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
     public static Player Current;
 
-    public bool isAlive = true;
+    public bool IsAlive = true;
     private Health _health;
+
+    [SerializeField] private UnityEvent _onGameEnd;
 
     private void Start()
     {
@@ -18,12 +20,17 @@ public class Player : MonoBehaviour
 
     public void SetAsDead()
     {
-        isAlive = false;
+        IsAlive = false;
+
+        if (!DeadBodyManager.Instance.isBodyAvailable)
+        {
+            _onGameEnd.Invoke();
+        }
     }
 
     public void SetAsAlive()
     {
-        isAlive = true;
+        IsAlive = true;
     }
 
     public void OnCollisionEnter2D(Collision2D other)
@@ -32,7 +39,7 @@ public class Player : MonoBehaviour
 
         if (deadBody == null)
             return;
-        
+
         if (!deadBody.IsAlive)
         {
             deadBody.RemoveItCompletely();

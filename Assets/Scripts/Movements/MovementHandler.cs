@@ -40,7 +40,7 @@ namespace Movements
 
         public void GetYeetedFromPlayer()
         {
-            if (Player.Current.isAlive)
+            if (Player.Current.IsAlive)
             {
                 GetYeetedFrom(Player.Current.transform.position);
             }

@@ -17,13 +17,13 @@ namespace Dead
 
         private void Update()
         {
-            if (!Player.Current.isAlive && _deadBody.IsAlive)
+            if (!Player.Current.IsAlive && _deadBody.IsAlive)
                 _collider.enabled = false;
-            else if (Player.Current.isAlive && _deadBody.IsAlive)
+            else if (Player.Current.IsAlive && _deadBody.IsAlive)
                 _collider.enabled = true;
-            else if (Player.Current.isAlive && !_deadBody.IsAlive)
+            else if (Player.Current.IsAlive && !_deadBody.IsAlive)
                 _collider.enabled = false;
-            else if (!Player.Current.isAlive && !_deadBody.IsAlive)
+            else if (!Player.Current.IsAlive && !_deadBody.IsAlive)
                 _collider.enabled = true;
         }
     }

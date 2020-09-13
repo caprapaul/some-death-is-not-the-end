@@ -18,6 +18,8 @@ namespace Spawning
             Instance = this;
         }
 
+        public bool isBodyAvailable => _bodies.Count > 0;
+
         public void RegisterDeadBody(DeadBody body)
         {
             if (_bodies.Count >= MaxDeadBodies)

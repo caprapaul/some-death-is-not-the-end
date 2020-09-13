@@ -40,12 +40,12 @@ namespace Spawning
 
         private void Update()
         {
-            if (Player.Current.isAlive && _isParticlePlaying)
+            if (Player.Current.IsAlive && _isParticlePlaying)
             {
                 _isParticlePlaying = false;
                 OnDeadIlluminatedParticle.Stop();
             }
-            else if (!Player.Current.isAlive && !_isParticlePlaying && !IsAlive)
+            else if (!Player.Current.IsAlive && !_isParticlePlaying && !IsAlive)
             {
                 _isParticlePlaying = true;
                 OnDeadIlluminatedParticle.Play();

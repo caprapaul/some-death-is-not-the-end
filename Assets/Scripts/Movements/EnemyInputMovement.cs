@@ -21,7 +21,7 @@ namespace Movements
 
         public void Update()
         {
-            if (!Player.Current.isAlive)
+            if (!Player.Current.IsAlive)
             {
                 _currentMovement.Direction = Vector2.zero;
                 return;
