@@ -5045,8 +5045,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe30c1cee64e7c48bc5ed85e246ff0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _current: 3
-  _maximum: 3
+  _current: 1
+  _maximum: 1
   _onDamaged:
     m_PersistentCalls:
       m_Calls: []
