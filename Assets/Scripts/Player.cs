@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
         {
             deadBody.RemoveItCompletely();
             _health.RestoreAll();
+            SetAsAlive();
         }
     }
 }

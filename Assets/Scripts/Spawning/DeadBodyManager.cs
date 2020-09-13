@@ -9,7 +9,7 @@ namespace Spawning
         public static DeadBodyManager Instance;
         
         public int MaxDeadBodies = 3;
-        public int TotalDeadBodyRetrieved { get; private set; } = 0;
+        public int TotalDeadBodyRetrieved { get; private set; }
         
         private Queue<DeadBody> _bodies = new Queue<DeadBody>();
 
@@ -39,6 +39,8 @@ namespace Spawning
         {
             int hashToRemove = body.GetHashCode();
             _bodies = new Queue<DeadBody>(_bodies.Where(b => b.GetHashCode() != hashToRemove));
+            
+            body.gameObject.SetActive(false);
         }
 
         public void ClearAllBodies()
