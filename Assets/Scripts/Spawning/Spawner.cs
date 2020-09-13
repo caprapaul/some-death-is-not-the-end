@@ -21,6 +21,14 @@ namespace Spawning
         private int _aliveCount = 0;
         private IEnumerator _spawnWave;
 
+        public int CurrentWave
+        {
+            get
+            {
+                return _currentWave;
+            }
+        }
+
         public void Start()
         {
             _spawnWave = SpawnWave();
@@ -36,7 +44,7 @@ namespace Spawning
         {
             yield return new WaitForSeconds(_timeBetweenWaves);
 
-            int spawnCount = Mathf.CeilToInt(_currentWave * Mathf.Log(_currentWave + 1));
+            int spawnCount = Mathf.CeilToInt(CurrentWave * Mathf.Log(CurrentWave + 1));
             int spawnedCount = 0;
             
             while (spawnedCount < spawnCount)
@@ -45,7 +53,7 @@ namespace Spawning
 
                 SpawnedObject spawnedObject = _spawnedObjects[spawnedObjectIndex];
 
-                if (_currentWave > spawnedObject.MinWave)
+                if (CurrentWave > spawnedObject.MinWave)
                 {
                     int spawnPointIndex = Random.Range(0, _spawnPoints.Count);
                     Transform spawnPoint = _spawnPoints[spawnPointIndex];
@@ -66,7 +74,7 @@ namespace Spawning
                 yield return null;
             }
 
-            _currentWave++;
+            _currentWave = CurrentWave + 1;
 
             StartCoroutine(SpawnWave());
         }
