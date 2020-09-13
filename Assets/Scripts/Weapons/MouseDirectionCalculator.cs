@@ -8,11 +8,11 @@ namespace Weapons
     {
         public Vector2 Direction { get; private set; } = Vector2.zero;
         private GameInputs _gameInputs;
-        private Camera _camera;
+        private UnityEngine.Camera _camera;
 
         private void Start()
         {
-            _camera = Camera.main;
+            _camera = UnityEngine.Camera.main;
         }
 
         private void OnEnable()
