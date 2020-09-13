@@ -1,7 +1,5 @@
-﻿using System;
-using Events;
+﻿using Events;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Receivers
 {

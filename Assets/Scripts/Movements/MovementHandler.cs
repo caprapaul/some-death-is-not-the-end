@@ -1,3 +1,5 @@
+using Spawning;
+using TMPro;
 using UnityEngine;
 
 namespace Movements
@@ -9,17 +11,24 @@ namespace Movements
 
         private Rigidbody2D _rb;
         private Vector2 _nextYeet = Vector2.zero;
+        private DeadBody _deadBody;
         
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
+            _deadBody = GetComponent<DeadBody>();
         }
 
         public void OnMove(MovementData movement)
         {
+            if (_deadBody != null && !_deadBody.IsAlive)
+            {
+                return;
+            }
+            
             Vector2 movementDelta = movement.Direction * (Speed * Time.deltaTime);
             Vector2 position = transform.position;
-            
+
             _rb.MovePosition(position + movementDelta + _nextYeet);
             _nextYeet = Vector2.zero;
         }
@@ -32,7 +41,10 @@ namespace Movements
 
         public void GetYeetedFromPlayer()
         {
-            GetYeetedFrom(Player.Current.transform.position);
+            if (Player.Current.isAlive)
+            {
+                GetYeetedFrom(Player.Current.transform.position);
+            }
         }
     }
 }

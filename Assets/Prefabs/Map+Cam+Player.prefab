@@ -1,87 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1554644506
+--- !u!1 &555083277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555083278}
+  - component: {fileID: 555083279}
+  m_Layer: 0
+  m_Name: DeadBodyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555083278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555083277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.893071, y: -4.6915383, z: 3.8307276}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3570306571956484533}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &555083279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747019355454372849}
+  m_GameObject: {fileID: 555083277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe30c1cee64e7c48bc5ed85e246ff0d, type: 3}
+  m_Script: {fileID: 11500000, guid: aef778c824bd4f8d86728b8f70853e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _current: 3
-  _maximum: 3
-  _onDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-  _onRestored:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 600457257}
-        m_MethodName: ToColor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _onDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7306156312251078832}
-        m_MethodName: SetAsDead
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 600457257}
-        m_MethodName: ToDark
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1554644507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747019355454372849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bccc4ad96b414ad58bd9d3c4dd27f1f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onDamaged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1554644506}
-        m_MethodName: Damage
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  MaxDeadBodies: 3
 --- !u!1 &5680965485419257810
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,31 +552,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5680965485419257811}
     m_Modifications:
-    - target: {fileID: 675439727, guid: 130016214006a0641bf33c58af9087f5, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 675439729, guid: 130016214006a0641bf33c58af9087f5, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1347083133
-      objectReference: {fileID: 0}
-    - target: {fileID: 675439729, guid: 130016214006a0641bf33c58af9087f5, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1563488373, guid: 130016214006a0641bf33c58af9087f5, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
+    - target: {fileID: 1554644506, guid: 130016214006a0641bf33c58af9087f5, type: 3}
+      propertyPath: _onRestored.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 600457257}
+    - target: {fileID: 1554644506, guid: 130016214006a0641bf33c58af9087f5, type: 3}
+      propertyPath: _onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 600457257}
     - target: {fileID: 8851488903914854064, guid: 130016214006a0641bf33c58af9087f5,
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8851488903914854064, guid: 130016214006a0641bf33c58af9087f5,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8851488903914854069, guid: 130016214006a0641bf33c58af9087f5,
         type: 3}
@@ -673,27 +622,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 130016214006a0641bf33c58af9087f5, type: 3}
---- !u!1 &3747019355454372849 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8851488903914854064, guid: 130016214006a0641bf33c58af9087f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 5680965485684256065}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3747019355454372852 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8851488903914854069, guid: 130016214006a0641bf33c58af9087f5,
     type: 3}
   m_PrefabInstance: {fileID: 5680965485684256065}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7306156312251078832 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3148709339909518833, guid: 130016214006a0641bf33c58af9087f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 5680965485684256065}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747019355454372849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e5df841917e4d52855c040849914890, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
