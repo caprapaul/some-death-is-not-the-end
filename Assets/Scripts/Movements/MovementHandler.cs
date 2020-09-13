@@ -1,5 +1,4 @@
 using Spawning;
-using TMPro;
 using UnityEngine;
 
 namespace Movements

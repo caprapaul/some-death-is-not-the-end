@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Movements;
 using Stats;
 using UnityEngine;
-using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 namespace Spawning
@@ -52,6 +52,7 @@ namespace Spawning
 
                     GameObject spawnedGameObject = Instantiate(spawnedObject.GameObject, spawnPoint.position, Quaternion.identity);
                     Health health = spawnedGameObject.GetComponent<Health>();
+                    spawnedGameObject.GetComponent<MovementHandler>().Speed = Random.Range(1.8f, 3.2f);
                     
                     health.OnDeath.AddListener(DecreaseAliveCount);
                     

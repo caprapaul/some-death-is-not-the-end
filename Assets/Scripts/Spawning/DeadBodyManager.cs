@@ -37,5 +37,13 @@ namespace Spawning
             int hashToRemove = body.GetHashCode();
             _bodies = new Queue<DeadBody>(_bodies.Where(b => b.GetHashCode() != hashToRemove));
         }
+
+        public void ClearAllBodies()
+        {
+            while (_bodies.Count > 0)
+            {
+                RemoveDeadBodyOnQueue();
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Senders
 
         public void Send(Collider2D otherCollider)
         {
-            DamageReceiver receiver = otherCollider.GetComponent<DamageReceiver>();
+            var receiver = otherCollider.GetComponent<DamageReceiver>();
 
             if (receiver == null)
             {

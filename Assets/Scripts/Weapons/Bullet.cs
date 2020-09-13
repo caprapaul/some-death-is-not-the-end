@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using QFSW.MOP2;
 using UnityEngine;
 
@@ -32,11 +31,6 @@ namespace Weapons
         {
             Vector3 deltaMove = new Vector3(Direction.x, Direction.y, 0) * (Speed * Time.deltaTime);
             _rigid.MovePosition(transform.position + deltaMove);
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            Debug.Log(other.gameObject.name);
         }
 
         public void KillBullet()
