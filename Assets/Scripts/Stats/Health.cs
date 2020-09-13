@@ -69,5 +69,10 @@ namespace Stats
                 _current += amount;
             }
         }
+
+        public void RestoreAll()
+        {
+            Restore(_maximum - Mathf.Min(_current, 0));
+        }
     }
 }

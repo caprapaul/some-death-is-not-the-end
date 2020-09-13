@@ -33,6 +33,11 @@ namespace Spawning
             _spriteRenderer.color = new Color(0.3f, 0.3f, 0.3f);
         }
 
+        public void RemoveItCompletely()
+        {
+            DeadBodyManager.Instance.RemoveDeadBody(this);
+        }
+
         private void Update()
         {
             if (Player.Current.isAlive && _isParticlePlaying)
