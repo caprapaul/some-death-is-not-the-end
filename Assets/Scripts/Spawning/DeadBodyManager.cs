@@ -9,6 +9,8 @@ namespace Spawning
         public static DeadBodyManager Instance;
         
         public int MaxDeadBodies = 3;
+        public int TotalDeadBodyRetreived { get; private set; } = 0;
+        
         private Queue<DeadBody> _bodies = new Queue<DeadBody>();
 
         public void Awake()
@@ -22,7 +24,8 @@ namespace Spawning
             {
                 RemoveDeadBodyOnQueue();
             }
-            
+
+            TotalDeadBodyRetreived++;
             _bodies.Enqueue(body);
         }
         
