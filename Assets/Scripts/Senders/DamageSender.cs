@@ -1,4 +1,5 @@
-﻿using Receivers;
+﻿using Events;
+using Receivers;
 using UnityEngine;
 
 namespace Senders
@@ -7,6 +8,9 @@ namespace Senders
     {
         [SerializeField] 
         private int _amount;
+        
+        [SerializeField] 
+        private IntEvent _onDamageSend;
 
         public void Send(Collider2D otherCollider)
         {
@@ -18,6 +22,7 @@ namespace Senders
             }
             
             receiver.Damage(_amount);
+            _onDamageSend.Invoke(_amount);
         }
     }
 }

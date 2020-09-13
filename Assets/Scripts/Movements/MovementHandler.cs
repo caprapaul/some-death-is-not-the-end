@@ -8,6 +8,7 @@ namespace Movements
         public float Speed = 5f;
 
         private Rigidbody2D _rb;
+        private Vector2 _nextYeet = Vector2.zero;
         
         private void Start()
         {
@@ -19,7 +20,19 @@ namespace Movements
             Vector2 movementDelta = movement.Direction * (Speed * Time.deltaTime);
             Vector2 position = transform.position;
             
-            _rb.MovePosition(position + movementDelta);
+            _rb.MovePosition(position + movementDelta + _nextYeet);
+            _nextYeet = Vector2.zero;
+        }
+
+        public void GetYeetedFrom(Vector3 pos, float power = 1f)
+        {
+            Vector2 inverseDelta = (pos - transform.position) * -1;
+            _nextYeet = inverseDelta.normalized * power;
+        }
+
+        public void GetYeetedFromPlayer()
+        {
+            GetYeetedFrom(Player.Current.transform.position);
         }
     }
 }

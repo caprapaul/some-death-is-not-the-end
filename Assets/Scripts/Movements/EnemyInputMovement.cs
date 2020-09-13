@@ -21,6 +21,12 @@ namespace Movements
 
         public void Update()
         {
+            if (!Player.Current.isAlive)
+            {
+                _currentMovement.Direction = Vector2.zero;
+                return;
+            }
+            
             NavMesh.SamplePosition(transform.position, out NavMeshHit hitA, 10f, _mask);
             NavMesh.SamplePosition(Player.Current.transform.position, out NavMeshHit hitB, 10f, _mask);
 
