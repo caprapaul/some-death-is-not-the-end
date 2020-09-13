@@ -34,6 +34,11 @@ namespace Weapons
 
         public void OnFire(InputAction.CallbackContext context)
         {
+            if (!context.canceled)
+            {
+                return;
+            }
+            
             if (!_weapon.CanFire())
                 return;
             
