@@ -1,4 +1,3 @@
-using System.Data.Common;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -25,11 +24,14 @@ namespace Movements
             NavMesh.SamplePosition(transform.position, out NavMeshHit hitA, 10f, _mask);
             NavMesh.SamplePosition(Player.Current.transform.position, out NavMeshHit hitB, 10f, _mask);
 
+            Debug.Log($"{hitA.position} {hitB.position}");
             if (!hitA.position.Equals(Vector3.positiveInfinity) && !hitB.position.Equals(Vector3.positiveInfinity))
             {
+                Debug.Log("found pos");
                 bool canMove = NavMesh.CalculatePath(hitA.position, hitB.position, _mask, _path);
                 if (canMove && _path.corners.Length >= 2)
                 {
+                    Debug.Log("I move");
                     Vector2 delta = _path.corners[1] - transform.position;
                     _currentMovement.Direction = delta.normalized;
                 }

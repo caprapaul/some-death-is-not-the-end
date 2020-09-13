@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Above
+  - name: wallface
+    uniqueID: 3080072561
+    locked: 0
+  - name: above
     uniqueID: 1347083133
     locked: 0

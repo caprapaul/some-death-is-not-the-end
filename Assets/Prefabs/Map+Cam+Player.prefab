@@ -62,7 +62,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5680965485464023307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.398594, y: 0.08757007, z: -3.335288}
+  m_LocalPosition: {x: 6.398594, y: 0.08757007, z: -9.999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5680965487004358314}
@@ -327,7 +327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5680965487115135640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.398594, y: 0.08757007, z: -3.335288}
+  m_LocalPosition: {x: 6.398594, y: 0.08757007, z: -9.999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5680965486743943581}
@@ -398,6 +398,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 8425196458264017395, guid: c5b8fc7e5fe2252439935e3330aff1f5,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1214894735
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425196458264017395, guid: c5b8fc7e5fe2252439935e3330aff1f5,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9176821925619798114, guid: c5b8fc7e5fe2252439935e3330aff1f5,
         type: 3}
       propertyPath: m_Name
@@ -416,7 +426,7 @@ PrefabInstance:
     - target: {fileID: 9176821925619798116, guid: c5b8fc7e5fe2252439935e3330aff1f5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.664712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9176821925619798116, guid: c5b8fc7e5fe2252439935e3330aff1f5,
         type: 3}
@@ -489,7 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 675439729, guid: 130016214006a0641bf33c58af9087f5, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1563488373, guid: 130016214006a0641bf33c58af9087f5, type: 3}
       propertyPath: m_Layer
@@ -518,7 +528,7 @@ PrefabInstance:
     - target: {fileID: 8851488903914854069, guid: 130016214006a0641bf33c58af9087f5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.664712
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8851488903914854069, guid: 130016214006a0641bf33c58af9087f5,
         type: 3}
