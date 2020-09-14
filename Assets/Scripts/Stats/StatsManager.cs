@@ -28,7 +28,7 @@ namespace Stats
             WaveCount = _spawner.CurrentWave;
         }
 
-        private void OnDestroy()
+        public void SaveStats()
         {
             PlayerPrefs.SetInt("last_kill_count", KillCount);
             PlayerPrefs.SetFloat("last_time_survived", ElapsedTime);
@@ -41,7 +41,7 @@ namespace Stats
                 PlayerPrefs.SetInt("best_kill_count", KillCount);
             }
             
-            int lastBestTime = PlayerPrefs.GetInt("best_time_survived", 0);
+            float lastBestTime = PlayerPrefs.GetFloat("best_time_survived", 0);
 
             if (ElapsedTime > lastBestTime)
             {
@@ -54,6 +54,8 @@ namespace Stats
             {
                 PlayerPrefs.SetInt("best_wave_count", WaveCount);
             }
+            
+            PlayerPrefs.Save();
         }
     }
 }

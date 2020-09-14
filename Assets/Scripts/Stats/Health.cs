@@ -17,6 +17,8 @@ namespace Stats
         [SerializeField]
         private UnityEvent _onDeath;
 
+        private bool _isAlive = true;
+
         public UnityEvent OnDamaged
         {
             get
@@ -41,13 +43,31 @@ namespace Stats
             }
         }
 
+        public bool IsAlive
+        {
+            get
+            {
+                return _isAlive;
+            }
+            set
+            {
+                _isAlive = value;
+            }
+        }
+
         public void Damage(int amount)
         {
+            if (!IsAlive)
+            {
+                return;
+            }
+            
             OnDamaged.Invoke();
         
             if (_current - amount <= 0)
             {
                 _current = 0;
+                IsAlive = false;
                 OnDeath.Invoke();
             }
             else

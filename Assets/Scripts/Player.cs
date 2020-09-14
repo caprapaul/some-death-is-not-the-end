@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public void SetAsAlive()
     {
         IsAlive = true;
+        _health.IsAlive = true;
     }
 
     public void OnCollisionEnter2D(Collision2D other)

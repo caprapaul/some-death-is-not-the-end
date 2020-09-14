@@ -229,7 +229,7 @@ PrefabInstance:
     - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
         type: 3}
       propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
         type: 3}
@@ -245,15 +245,40 @@ PrefabInstance:
         type: 3}
       propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 831411418}
+      objectReference: {fileID: 671070821}
     - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
         type: 3}
       propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Load
+      value: SaveStats
       objectReference: {fileID: 0}
     - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
         type: 3}
       propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
+        type: 3}
+      propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
+        type: 3}
+      propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
+        type: 3}
+      propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 831411418}
+    - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
+        type: 3}
+      propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Load
+      objectReference: {fileID: 0}
+    - target: {fileID: 7306156312251078832, guid: f4d2e73458f86c344916e2ed7a6b7d13,
+        type: 3}
+      propertyPath: _onGameEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []

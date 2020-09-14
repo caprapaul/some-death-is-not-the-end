@@ -1,3 +1,4 @@
+using Receivers;
 using Senders;
 using UnityEngine;
 using UnityEngine.Events;
@@ -36,6 +37,10 @@ namespace Spawning
             var damageSender = GetComponent<DamageSender>();
             if (damageSender)
                 Destroy(damageSender);
+                
+            var damageReceiver = GetComponent<DamageReceiver>();
+            if (damageReceiver)
+                Destroy(damageReceiver);
         }
 
         public void RemoveItCompletely()
